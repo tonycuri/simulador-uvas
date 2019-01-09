@@ -12,6 +12,12 @@ body {
     vertical-align: text-bottom;
 }
 
+.titulo{
+    text-transform: uppercase;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
 .logo {
     display: inline-block;
     width: 400px;
@@ -114,13 +120,12 @@ body {
 
 .container {
     display: flex;
-    width: 25%;
     box-sizing: border-box;
     margin-right: 2%;
     text-align: center;
     color: white;
     border-radius: 8px;
-
+    padding: 10px;   
     align-items: center;
 }
 .green{
@@ -135,7 +140,6 @@ body {
 
 .menu-container {
     display: block;
-    width: 20%;
     padding-right: 20px;
 }
 
@@ -171,7 +175,7 @@ body {
         flex-direction: column-reverse;
     }
 
-    .green-container {
+    .container {
         width: 100%;
         margin-bottom: 20px;
     }
@@ -192,6 +196,7 @@ body {
     }
 
     .logo {
-        margin-bottom: 10px;
+        width: 100%;
+        font-size: 16px;
     }
 }
