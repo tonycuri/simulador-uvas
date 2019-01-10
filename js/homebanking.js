@@ -5,6 +5,7 @@ var uvaHoy;
 var subsidio;
 var ahorro;
 var montoUvasPesos;
+var diferencia;
 
 
 function iniciarSimulacion(){
@@ -23,16 +24,17 @@ function sacarPorcentaje(){
         document.getElementById("monto-total-uvas"+i).innerHTML = "El monto total de la propiedad en UVAS es: " + montoUvas;
         document.getElementById("total-subsidio" + i).innerHTML = "El 14% del subsidio en UVAS es: " + subsidio;
         document.getElementById("total-ahorro" + i).innerHTML = "El 6% de ahorro es de: " + ahorro + " en 9 de cuotas de " + ahorro / 9;
-        
+        calcularPesos(i,uva[i]);
     }
 }
 
-function calcularPesos(pesos){
-    montoUvasPesos = montoUvas * pesos;
-    console.log(pesos);
-
+function calcularPesos(index,pesos){
+    montoUvasPesos = parseFloat((montoUvas - subsidio - ahorro) * pesos).toFixed(2);
+    diferencia = parseFloat(montoUvasPesos - montoBanco).toFixed(2);
+    document.getElementById("total-pesos" + index).innerHTML = "El monto total de la propiedad en PESOS es: $"+ montoUvasPesos;
+    document.getElementById("total-banco" + index).innerHTML = "El prestamos del banco en PESOS es: $" + montoBanco;
+    document.getElementById("total-diferencia" + index).innerHTML = "La diferencia que tenes que poner en PESOS es: $" + diferencia;
 }
 
-//Ejecución de las funciones que actualizan los valores de las variables en el HTML
 
 
