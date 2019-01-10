@@ -23,7 +23,7 @@ function sacarPorcentaje(){
     for (let i = 0; i < 3; i++) {
         document.getElementById("monto-total-uvas"+i).innerHTML = "El monto total de la propiedad en UVAS es: " + montoUvas;
         document.getElementById("total-subsidio" + i).innerHTML = "El 14% del subsidio en UVAS es: " + subsidio;
-        document.getElementById("total-ahorro" + i).innerHTML = "El 6% de ahorro es de: " + ahorro + " en 9 de cuotas de " + ahorro / 9;
+        document.getElementById("total-ahorro" + i).innerHTML = "El 6% de ahorro es de: " + ahorro + " en 9 de cuotas de " + parseFloat(ahorro / 9).toFixed(2);
         calcularPesos(i,uva[i]);
     }
 }
